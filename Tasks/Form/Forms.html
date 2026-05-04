@@ -8,21 +8,52 @@
 <body>
     <form action="/register" method="post">
         <fieldset>
-        <legend>personal details</legend>
-        <label for="fname">Firstname</label>
-        <input type="text" id="fname" required> 
-        <label for="sname">Surname</label>
-        <input type="text" id="sname" required>
-        <label for="dob">Date of birth</label>
+        <legend>Personal details</legend>
+        <label for="fname">Firstname</label><br>
+        <input type="text" id="fname" required><br>
+        <label for="sname">Surname</label><br>
+        <input type="text" id="sname" required><br>
+        <label for="dob">Date of birth</label><br>
         <input type="date" id="dob" required>
     </fieldset>
-    ,<fieldset>
+    <fieldset>
         <legend>Account details</legend>
-        <label for="mail">Email</label>
-        <input type="email" id="mail" required>
-        <label for="psword">Password</label>
+        <label for="mail">Email</label><br>
+        <input type="email" id="mail" required><br>
+        <label for="psword">Password</label><br>
+        <input type="password" minlength="8" required><br>
+        <label for="cpsword">Confirm password</label><br>
         <input type="password" required>
     </fieldset>
+    <fieldset>
+        <legend>Program details</legend>
+        <label for="cohort">Student Cohort</label>
+        <select id="cohort" name="cohort">
+            <option value="select">-- Select --</option>
+            <option value="phoenix">Phoenix</option>
+            <option value="others">Others</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Area of interest</legend>
+        <label for="interest">Program</label>
+        <select id="interest" name="interest">
+            <option value="">-- Select --</option>
+            <optgroup label="Frontend">                
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">Javascript</option>
+            </optgroup>
+            <optgroup label="Backend">
+                <option value="node">Node js</option>
+                <option value="php">PHP</option>
+                <option value="c">C programming</option>
+            </optgroup>
+        </select>
+    </fieldset>
+    <input type="reset" id="clear"><br>
+    <input type="checkbox" id="agree">
+    <label for="agree">I agree to the terms and conditions</label>
     </form>
 </body>
 </html>
